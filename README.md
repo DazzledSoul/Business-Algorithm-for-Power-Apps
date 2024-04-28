@@ -1,4 +1,4 @@
-# Contents
+# Content
 * Contextual variable
 * Global Variable
 * Patch Function
