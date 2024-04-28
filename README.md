@@ -3,8 +3,10 @@
 **Contextual variable:**
 UpdateContext({var:Card.Text,var2:Card2.Selected.Value})
 
+
 **Global Variable:**
 Set(var,Card.Text);Set(var2,Card2.Text)
+
 
 **Patch Function:**
 -To Update: Patch(List,Gallery.Selected,{'Col':"Value",'Col2':"Value2"})
