@@ -1,27 +1,35 @@
 # Power-Apps-Helper
 
 **Contextual variable:**
+
 UpdateContext({var:Card.Text,var2:Card2.Selected.Value})
 
 
 **Global Variable:**
+
 Set(var,Card.Text);Set(var2,Card2.Text)
 
 
 **Patch Function:**
+
 -To Update: Patch(List,Gallery.Selected,{'Col':"Value",'Col2':"Value2"})
+
 -To Add: Patch(List,Defaults(List),{'Col':"Value",'Col2':"Value2"})
 
 **Login Validation:**
+
 -Button >> OnSelect >> if(!IsBlank(Lookup(List,Username=Input1.Text,password=Input2.Text).Username),Navigate(Success),UpdateContext({showErrorMessage: true}))
+
 -TextLabel >> Visible >> showErrorMessage
 
 **Cascading Form:**
 -DropDown1 >> item >> Distinct(List,Column1)
+
 -DropDown2 >> item >> Filter(List,Column1 = Card.Selected.Value).Column2
 
 **Data Validation:**
 -BorderColor >> If(IsBlank(ErrorMessage.Text), Parent.BorderColor, Color.Red)
+
 -ErrorMessage >> Coalesce(
     Parent.Error,
     If(
