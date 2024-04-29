@@ -106,3 +106,18 @@
 Gallery >> item >> 
 
 	Search(List,Input1.Text,"Col1","Col2")
+
+# Chart
+Piechart
+
+
+Modify for adding columns 
+Addcolumn(<listname>,<whatname u want for this new column>,<values for this column >)
+
+
+
+For gallery
+Ensure pichart -> selected is set to true
+
+On gallery
+OnSelect -> Filter( <listname>, column name of list = piechart.selected.value)
